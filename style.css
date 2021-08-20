@@ -1,17 +1,45 @@
 :root {
-	font-size: 17px;
-	--background: #261b17;
-	--shadow: #1b110e;
-	--accent: #e86420;
-	--foreground: #e4cbb3;
-	--accent-alt: #e01d1d;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --background: #261b17;
+  --shadow: #1b110e;
+  --accent: #e86420;
+  --foreground: #e4cbb3;
+  --accent-alt: #e01d1d;
 }
 * {
-	font-family: 'Fira Code', monospace;
-	font-weight: 300;
-	background-color: var(--background, #261b17);
-	color: var(--foreground, #e4cbb3);
-	-webkit-tap-highlight-color: transparent;
-	text-decoration: none;
-	line-height: 1.2;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  background-color: var(--background, #261b17);
+  color: var(--foreground, #e4cbb3);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  line-height: 1.2;
+}
+body {
+  margin: 0;
+}
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--foreground, #e4cbb3);
+}
+main {
+  display: flex;
+}
+main > fieldset {
+  height: 100vh;
+}
+.about-me, .contributions {
+  margin: 0rem 0rem 0rem 0.3rem;
+  flex: 1;
+}
+.about-me {
+  margin: 0rem 0.3rem 0rem 0rem;
+}
+.projects {
+  flex: 3;
 }
