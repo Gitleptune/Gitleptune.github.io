@@ -16,16 +16,13 @@
   color: var(--foreground, #e4cbb3);
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
-  line-height: 1.2;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-a {
-  color: var(--accent-alt-2, #e35b15);
-}
-a:visited {
-	color: var(--foreground, #e4cbb3);
+a, a:visited {
+  color: var(--accent-alt-2, #e35b15) !important;
+  text-decoration: underline;
 }
 a:hover {
 	color: var(--accent, #e86420);
@@ -35,10 +32,26 @@ a:active,
 a:focus {
 		color: var(--accent-alt, #e01d1d);
 }
-/* Flexing */
+/* Copying Tailwind like never before */
 .flex {
   display: flex;
 }
+.txt-cntr {
+  text-align: center;
+}
+.jst-cnt-cntr {
+  justify-content: center;
+}
+.algn-cntr {
+  align-items: center;
+}
+.mega-cntr {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+/* Flexing */
 main {
   margin: 0.25rem 0.3rem 0rem 0.3rem;
 }
@@ -56,26 +69,77 @@ main > fieldset {
 fieldset {
   display: flex;
   flex-direction: column;
-  border: 2px solid var(--foreground, #e4cbb3);
+  border: 3px solid var(--foreground, #e4cbb3);
 }
 /* Text in box */
 legend {
-	margin: auto; /* Center text*/
+  margin: auto; /* Center text*/
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   -webkit-user-select: none;   /*                        */
   -moz-user-select: -moz-none; /* Make text unselectable */
   user-select: none;           /*                        */
 }
 /* About me */
-.about-me > .text-box {
-  margin: 1rem;
+.about-me fieldset {
+  margin: 1rem 1rem 0rem 1rem;;
   padding: 1rem;
+  border: 2px solid var(--foreground, #e4cbb3);
 }
-.github {
-  margin-top: 0.8rem;
-  /* align-items: center; */
+.github-logo {
+  margin-top: 0.85rem;
 }
-.github > span {
+.github-logo > span {
   margin-right: 0.7rem;
+}
+/* Languages and tools badges */
+.languages, .tools {
+  flex-direction:row;
+}
+.languages legend, .tools legend {
+  font-size: 1em;
+  font-weight: 400;
+}
+.languages span, .tools span {
+  color: #fff !important;
+  width: fit-content;
+  padding: 0.22rem;
+  display: flex;
+  justify-content: center;
+  margin: 0rem 0.3rem 0rem 0.3rem;
+}
+.languages svg, .tools svg {
+  margin-right: 0.3rem;
+}
+.html {
+  background-color: #e34c26;
+}
+.css, .css svg {
+  background-color: #563d7c;
+}
+.js, .js svg {
+  background-color: #f1e05a;
+  color: var(--shadow) !important;
+}
+.md {
+  background-color: #083fa1;
+}
+.latex {
+  background-color: #3d6117;
+}
+.cpp {
+  background-color: #f34b7d;
+}
+.java {
+  background-color: #b07219;
+}
+.vscode {
+  background-color: #0078d7;
+}
+.vim {
+  color: #;
+}
+.wsl, .wsl svg {
+  background-color: #e95420 ;
+  margin-top: 0.1rem;
 }
