@@ -5,6 +5,7 @@
   --foreground: #e4cbb3;
   --background: #261b17;
   --shadow: #1b110e;
+  --highlight: #f99666;
   --accent: #e86420;
   --accent-alt: #e01d1d;
   --accent-alt-2: #e35b15;
@@ -19,6 +20,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+::selection {
+  background-color: var(--highlight);
+  color: var(--shadow)
+}
+::-webkit-scrollbar {
+  display: none;
 }
 a, a:visited {
   color: var(--accent-alt-2, #e35b15) !important;
@@ -36,6 +44,12 @@ a:focus {
 .flex {
   display: flex;
 }
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
 .txt-cntr {
   text-align: center;
 }
@@ -51,7 +65,10 @@ a:focus {
   justify-content: center;
   align-items: center;
 }
-/* Flexing */
+.italic {
+  font-style: italic;
+}
+/* Flexing & positioning */
 main {
   margin: 0.25rem 0.3rem 0rem 0.3rem;
 }
@@ -61,9 +78,11 @@ main > fieldset {
 }
 .contributions, .about-me {
   flex: 1;
+  overflow-y: scroll;
 }
 .projects {
   flex: 2;
+  overflow-y: scroll;
 }
 /* Boxes */
 fieldset {
@@ -82,7 +101,7 @@ legend {
 }
 /* About me */
 .about-me fieldset {
-  margin: 1rem 1rem 0rem 1rem;;
+  margin: 1rem 1rem 0rem 1rem;
   padding: 1rem;
   border: 2px solid var(--foreground, #e4cbb3);
 }
@@ -94,25 +113,24 @@ legend {
 }
 /* Languages and tools badges */
 .languages, .tools {
-  flex-direction:row;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .languages legend, .tools legend {
   font-size: 1em;
   font-weight: 400;
 }
 .languages span, .tools span {
-  color: #fff !important;
+  color: #fff;
   width: fit-content;
   padding: 0.22rem;
+  margin: 0.3rem;
   display: flex;
   justify-content: center;
-  margin: 0rem 0.3rem 0rem 0.3rem;
+  font-weight: 400;
 }
 .languages svg, .tools svg {
   margin-right: 0.3rem;
-}
-.html {
-  background-color: #e34c26;
 }
 .css, .css svg {
   background-color: #563d7c;
@@ -121,25 +139,40 @@ legend {
   background-color: #f1e05a;
   color: var(--shadow) !important;
 }
-.md {
+.html, .html svg {
+  background-color: #e34c26;
+  margin-top: 0.1rem;
+}
+.md, .md svg {
   background-color: #083fa1;
+  margin-top: 0.05rem;
 }
-.latex {
-  background-color: #3d6117;
-}
-.cpp {
+.cpp, .cpp svg {
   background-color: #f34b7d;
+  margin-top: 0.05rem;
 }
-.java {
+.java, .java svg {
   background-color: #b07219;
 }
-.vscode {
-  background-color: #0078d7;
+.latex, .latex svg {
+  background-color: #3d6117;
 }
-.vim {
-  color: #;
+.vscode, .vscode svg {
+  background-color: #0078d7;
+  margin-top: 0.05rem;
+}
+.vim, .vim svg {
+  background-color: #199f4b;
 }
 .wsl, .wsl svg {
   background-color: #e95420 ;
   margin-top: 0.1rem;
+}
+/* Random qute */
+fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(1),
+fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(3) {
+  margin: 0.3em;
+}
+b {
+  font-weight: 700 !important;
 }
