@@ -50,6 +50,9 @@ a:focus {
 .flex-col {
   flex-direction: column;
 }
+.flex-grow-1 {
+  flex-grow: 1;
+}
 .txt-cntr {
   text-align: center;
 }
@@ -68,6 +71,9 @@ a:focus {
 .italic {
   font-style: italic;
 }
+.small-caps {
+  font-variant: small-caps;
+}
 .txt-default {
   font-style: normal !important;
 }
@@ -82,6 +88,7 @@ main > fieldset {
 .contributions, .about-me {
   flex: 1;
   overflow-y: scroll;
+  padding: 1em; /* aaaaaaaa */
 }
 .projects {
   flex: 2;
@@ -95,7 +102,7 @@ fieldset {
 }
 /* Text in box */
 legend {
-  margin: auto; /* Center text*/
+  margin: auto; /* Center text */
   -webkit-user-select: none;   /*                        */
   -moz-user-select: -moz-none; /* Make text unselectable */
   user-select: none;           /*                        */
@@ -108,8 +115,8 @@ legend {
 }
 /* About me */
 .about-me fieldset { /* Boxes */
-  margin: 1.1rem 1.1rem 0rem 1.1rem;
-  padding: 1rem;
+  margin: 1rem 1rem 0rem 1rem;
+  padding: 1.1rem;
   border: 2px solid var(--foreground, #e4cbb3);
 }
 .github-logo {
@@ -161,7 +168,7 @@ legend {
   background-color: #b07219;
 }
 .latex, .latex svg {
-  background-color: #3d6117;
+  background-color: #066;
 }
 .vscode, .vscode svg {
   background-color: #0078d7;
@@ -173,18 +180,4 @@ legend {
 .wsl, .wsl svg {
   background-color: #e95420 ;
   margin-top: 0.1rem;
-}
-/* Random quote */
-/* fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(1),
-fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(3) {
-  margin: 0.3em;
-} */
-fieldset.flex.flex-row.txt-cntr.italic > legend {
-  font-size: 1em;
-}
-fieldset.flex.flex-row.txt-cntr.italic {
-  flex: 0.94;
-}
-b {
-  font-weight: 700 !important;
 }
