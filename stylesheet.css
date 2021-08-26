@@ -68,6 +68,9 @@ a:focus {
 .italic {
   font-style: italic;
 }
+.txt-default {
+  font-style: normal !important;
+}
 /* Flexing & positioning */
 main {
   margin: 0.25rem 0.3rem 0rem 0.3rem;
@@ -93,20 +96,24 @@ fieldset {
 /* Text in box */
 legend {
   margin: auto; /* Center text*/
-  font-size: 1.25rem;
-  font-weight: 600;
   -webkit-user-select: none;   /*                        */
   -moz-user-select: -moz-none; /* Make text unselectable */
   user-select: none;           /*                        */
 }
+.about-me > legend,
+.projects > legend,
+.contributions > legend {
+  font-weight: 600 ;
+  font-size: 1.2rem;
+}
 /* About me */
-.about-me fieldset {
-  margin: 1rem 1rem 0rem 1rem;
+.about-me fieldset { /* Boxes */
+  margin: 1.1rem 1.1rem 0rem 1.1rem;
   padding: 1rem;
   border: 2px solid var(--foreground, #e4cbb3);
 }
 .github-logo {
-  margin-top: 0.85rem;
+  margin-top: 0.70rem;
 }
 .github-logo > span {
   margin-right: 0.7rem;
@@ -118,12 +125,11 @@ legend {
 }
 .languages legend, .tools legend {
   font-size: 1em;
-  font-weight: 400;
 }
 .languages span, .tools span {
   color: #fff;
   width: fit-content;
-  padding: 0.22rem;
+  padding: 0.25rem;
   margin: 0.3rem;
   display: flex;
   justify-content: center;
@@ -168,10 +174,16 @@ legend {
   background-color: #e95420 ;
   margin-top: 0.1rem;
 }
-/* Random qute */
-fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(1),
+/* Random quote */
+/* fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(1),
 fieldset.flex.flex-row.txt-cntr.italic > p:nth-child(3) {
   margin: 0.3em;
+} */
+fieldset.flex.flex-row.txt-cntr.italic > legend {
+  font-size: 1em;
+}
+fieldset.flex.flex-row.txt-cntr.italic {
+  flex: 0.94;
 }
 b {
   font-weight: 700 !important;
