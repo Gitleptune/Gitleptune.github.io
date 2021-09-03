@@ -2,123 +2,111 @@
 /* Base */
 :root {
   font-size: 16px;
+  --shadow: #1b110e;
+  --accent: #e86420;
+  --highlight: #f99666;
   --foreground: #e4cbb3;
   --background: #261b17;
-  --shadow: #1b110e;
-  --highlight: #f99666;
-  --accent: #e86420;
   --accent-alt: #e01d1d;
   --accent-alt-2: #e35b15;
 }
 * {
-  font-family: "Fira Code", monospace;
-  font-weight: 300;
-  background-color: var(--background, #261b17);
+  color: #e4cbb3; /* IE: Fix FG */
   color: var(--foreground, #e4cbb3);
-  -webkit-tap-highlight-color: transparent;
-  text-decoration: none;
+  background: #261b17; /* IE: Fix BG */
+  background-color: var(--background, #261b17);
   margin: 0;
   padding: 0;
+  font-weight: 300;
+  text-decoration: none;
   box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  -webkit-tap-highlight-color: transparent;
+  -ms-overflow-style: none; /* IE: No scrollbar */
 }
 ::selection {
+  color: var(--shadow);
   background-color: var(--highlight);
-  color: var(--shadow)
 }
 ::-webkit-scrollbar {
   display: none;
 }
 a, a:visited {
-  color: var(--accent-alt-2, #e35b15) !important;
   text-decoration: underline;
+  color: #e35b15; /* IE: Fix link colour */
+  color: var(--accent-alt-2, #e35b15) !important;
 }
 a:hover {
-	color: var(--accent, #e86420);
 	cursor: pointer;
+	color: var(--accent, #e86420);
 }
 a:active,
 a:focus {
 		color: var(--accent-alt, #e01d1d);
 }
 /* Copying Tailwind like never before */
-.flex {
-  display: flex;
-}
-.flex-row {
-  flex-direction: row;
-}
-.flex-col {
-  flex-direction: column;
-}
-.flex-grow-1 {
-  flex-grow: 1;
-}
-.txt-cntr {
-  text-align: center;
-}
-.jst-cnt-cntr {
-  justify-content: center;
-}
-.algn-cntr {
-  align-items: center;
-}
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-col { flex-direction: column; }
+.flex-grow-1 { flex-grow: 1; }
+.flex-wrap { flex: wrap; }
+.txt-cntr { text-align: center; }
+.jst-cnt-cntr { justify-content: center; }
+.algn-cntr { align-items: center; }
 .mega-cntr {
   display: flex;
   text-align: center;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
-.italic {
-  font-style: italic;
-}
-.small-caps {
-  font-variant: small-caps;
-}
-.txt-default {
-  font-style: normal !important;
-}
+.italic { font-style: italic; }
+.small-caps { font-variant: small-caps; }
+.txt-default { font-style: normal !important; }
 /* Flexing & positioning */
 main {
   margin: 0.25rem 0.3rem 0rem 0.3rem;
 }
 main > fieldset {
-  margin: 0rem 0.4rem 0rem 0.4rem;
   height: 98.3vh;
+  margin: 0rem 0.4rem 0rem 0.4rem;
 }
 .contributions, .about-me {
   flex: 1;
+  padding: 1em;
   overflow-y: scroll;
-  padding: 1em; /* aaaaaaaa */
 }
 .projects {
   flex: 2;
+  padding: 1em;
   overflow-y: scroll;
 }
 /* Boxes */
 fieldset {
   display: flex;
   flex-direction: column;
-  border: 3px solid var(--foreground, #e4cbb3);
+  border: 3px solid #e4cbb3; /* IE: Fix border */
+}
+.about-me fieldset, .contributions fieldset, .projects fieldset { /* Boxes */
+  padding: 1.1rem;
+  margin: 1rem 1rem 0rem 1rem;
+  border: 2px solid var(--foreground, #e4cbb3);
+	box-shadow: 8px 8px 7px 2px var(--shadow, #1b110e);
 }
 /* Text in box */
 legend {
+  padding: 0em 0.5em;
   margin: auto; /* Center text */
-  -webkit-user-select: none;   /*                        */
-  -moz-user-select: -moz-none; /* Make text unselectable */
   user-select: none;           /*                        */
+  -webkit-user-select: none;   /* Make text unselectable */
+  -moz-user-select: -moz-none; /*                        */
 }
 .about-me > legend,
 .projects > legend,
 .contributions > legend {
-  font-weight: 600 ;
+  font-weight: 600;
   font-size: 1.2rem;
 }
 /* About me */
-.about-me fieldset { /* Boxes */
-  margin: 1rem 1rem 0rem 1rem;
-  padding: 1.1rem;
-  border: 2px solid var(--foreground, #e4cbb3);
-}
 .github-logo {
   margin-top: 0.70rem;
 }
@@ -127,20 +115,20 @@ legend {
 }
 /* Languages and tools badges */
 .languages, .tools {
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 .languages legend, .tools legend {
   font-size: 1em;
 }
 .languages span, .tools span {
   color: #fff;
-  width: fit-content;
-  padding: 0.25rem;
-  margin: 0.3rem;
   display: flex;
-  justify-content: center;
+  margin: 0.3rem;
+  padding: 0.25rem;
   font-weight: 400;
+  width: fit-content;
+  justify-content: center;
 }
 .languages svg, .tools svg {
   margin-right: 0.3rem;
@@ -153,16 +141,16 @@ legend {
   color: var(--shadow) !important;
 }
 .html, .html svg {
-  background-color: #e34c26;
   margin-top: 0.1rem;
+  background-color: #e34c26;
 }
 .md, .md svg {
-  background-color: #083fa1;
   margin-top: 0.05rem;
+  background-color: #083fa1;
 }
 .cpp, .cpp svg {
-  background-color: #f34b7d;
   margin-top: 0.05rem;
+  background-color: #f34b7d;
 }
 .java, .java svg {
   background-color: #b07219;
@@ -171,13 +159,85 @@ legend {
   background-color: #066;
 }
 .vscode, .vscode svg {
-  background-color: #0078d7;
   margin-top: 0.05rem;
+  background-color: #0078d7;
 }
 .vim, .vim svg {
   background-color: #199f4b;
 }
 .wsl, .wsl svg {
-  background-color: #e95420 ;
   margin-top: 0.1rem;
+  background-color: #e95420 ;
+}
+/* Tooltips */
+.languages span, .tools span {
+  position: relative;
+  cursor: pointer;
+}
+.languages span::before, .tools span::before {
+  content: attr(aria-label);
+  opacity: 0; /* Hide tooltip */
+  /* Positioning */
+  position: absolute;
+  z-index: 1; /* Overlay outside other tooltipable elements*/
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 1.25em;
+  padding: 1em;
+  /* Colours */
+  color: #e4cbb3; /* IE: Fix fg */
+  background-color: #1b110e; /* IE: Fix bg */
+	box-shadow: 4px 3px 3px 2px var(--shadow, #1b110e);
+  border: 2px solid #e4cbb3;
+}
+.languages span:hover::before,
+.tools span:hover::before {
+  opacity: 1;
+  transition: 0ms;
+  transition-delay: 100ms;
+}
+/* Cards */
+.proj-card {
+  height: fit-content;
+  /* aspect-ratio: 1/1; */
+}
+/* 
+___________projects___________
+|  _________     _________   |
+| |         |   |         |  |
+| |         |   |         |  |
+| |_________|   |_________|  |
+|                            |
+|  __________    __________  |
+| |         |   |         |  |
+| |         |   |         |  |
+| |_________|   |_________|  |
+|                            |
+-----end of page (scroll)-----
+|  __________    __________  |
+| |         |   |         |  |
+| |         |   |         |  |
+| |_________|   |_________|  |
+*/
+
+/* Contributions */
+.contrib-card {
+  flex-direction: row;
+  display: flex;
+}
+.contrib-card > div:first-of-type {
+  height: auto;
+  flex-grow: 1;
+  border: 1px solid rebeccapurple;
+}
+.contrib-card > div:last-child {
+  height: auto;
+  flex-grow: 1;
+  border: 1px solid rebeccapurple;
+}
+.contrib-card > p {
+  height: auto;
+  flex-grow: 1;
+  border: 1px solid tomato;
 }
