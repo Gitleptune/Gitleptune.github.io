@@ -1,1 +1,213 @@
-create directories
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css">
+    <title>Mitosis</title>
+</head>
+<style>
+    :root {
+	--background: #261b17;
+	--header: #1b110e;
+	--background-alt: #291812;
+	--hover: #532f28;
+	--highlight: #f99666;
+	--highlight-alt: #fad256;
+	--ui: #e35b15;
+	--ui-alt: #fabc2c;
+	--onclick: #e86420;
+	--visited: #e04220;
+    --text: #e4cbb3;
+	--green-light: #82a23a;
+	--green-dark: #4d772d;
+	--blue-light: #66a4a4;
+	--blue-dark: #4395a3;
+	--purple-light: #c888e8;
+	--purple-dark: #b666e6;
+	--pink-light: #fab2c2;
+	--pink-dark: #fff;
+	--orange-light: #e86420;
+	--orange-dark: #e35b15;
+	--red-light: #e04220;
+	--red-dark: #e01d1d;
+	--brown-light: #291812;
+	--brown-dark: #1b110e;
+	--yellow-light: #fad256;
+	--yellow-dark: #fabc2c;
+/* 
+  .
+ (
+ )\
+((_)       _    _   _ _____ _____ ___   _   _
+ | |      / \  | \ | |_   _| ____|  _ \| \ | |
+ | |     / _ \ |  \| | | | |  _| | |_) |  \| |
+ | |___ / ___ \| |\  | | | | |___|  _ <| |\  |
+ |_____/_/   \_|_| \_| |_| |_____|_| \_|_| \_|
+  _____ _   _ _____ __  __ _____
+ |_   _| | | | ____|  \/  | ____|
+   | | | |_| |  _| | |\/| |  _|
+   | | |  _  | |___| |  | | |___
+   |_| |_| |_|_____|_|  |_|_____|
+}
+*/
+}
+* {
+   background-color: var(--background);
+    color: var(--text);
+    font-family: 'Fira Code', monospace
+}
+h1, h3 {
+    text-align: center;
+}
+h3 {
+	color: var(--highlight);
+	font-weight: 500;
+}
+h1 {
+	color: var(--ui);
+	font-weight: 900;
+}
+hr {
+	border-color: var(--highlight);
+}
+#definition {
+    text-align: center;
+    font-size: 0.85em;
+}
+section {
+    display: flex;
+}
+p {
+	margin: 1em;
+}
+img {
+	margin: 1em;
+	width: 10em;
+}
+body, html {
+	height: 100%;
+}
+body {
+  display:flex;
+  margin:0;
+  flex-direction:column;
+}
+#interphase {
+	margin-left: 4.88em ;
+}
+#prophase {
+	margin-left: 5.5em;
+}
+#metaphase {
+	margin-left: 1.8em;
+}
+#anaphase {
+	margin-left: 2em;
+}
+#telophase {
+	margin-left: 2em;
+}
+.everything-wrapper {
+  margin: auto;
+}
+</style>
+
+<body>
+	<div class="everything-wrapper">
+    <h1>Mitosis</h1>
+    <p id="definition">The process where a single cell divides into two identical daughter cells.</p>
+    <div>
+			<h3>Interphase</h3>
+			<section>
+				<p>
+					<ul>
+						<li>Cell grows</li>
+						<li>Prepares for mitosis</li>
+						<li>Replicates DNA</li>
+						<li>Has 3 stages</li>
+					</ul>
+				</p>
+				<img id="interphase" src="https://raw.githubusercontent.com/Gitleptune/Gitleptune.github.io/main/misc/img/interphase.png">
+				<p>
+					<ul>
+						<li>G1: make new organelles</li>
+						<li>S: copy DNA & Chromosmes</li>
+						<li>G2: prepare to divide</li>
+					</ul>
+				</p>
+			</section>
+			<hr>
+    </div>
+    <div>
+			<h3>Prophase</h3>
+			<section>
+				<p>
+					<ul>
+						<li>Chromosomes condense</li>
+					</ul>
+				</p>
+				<img id="prophase" src="https://raw.githubusercontent.com/Gitleptune/Gitleptune.github.io/main/misc/img/prophase.png">
+				<p>
+					<ul>
+						<li>Nuclear membrane disappears</li>
+					</ul>
+				</p>
+			</section>
+			<hr>
+    </div>
+    <div>
+			<h3>Metaphase</h3>
+			<section>
+				<p>
+					<ul>
+						<li>Chromosomes line up in the<br> middle</li>
+					</ul>
+				</p>
+				<img id="metaphase" src="https://raw.githubusercontent.com/Gitleptune/Gitleptune.github.io/main/misc/img/metaphase.png">
+				<p>
+					<ul>
+						<li>Each sister chromatid<br> is facing one of<br> the ends of the cell</li>
+					</ul>
+				</p>
+			</section>
+			<hr>
+    </div>
+		<div>
+			<h3>Anaphase</h3>
+			<section>
+				<p>
+					<ul>
+						<li>Sister chromatids separate<br> from each other</li>
+					</ul>
+				</p>
+				<img id="anaphase" src="https://raw.githubusercontent.com/Gitleptune/Gitleptune.github.io/main/misc/img/anaphase.png">
+				<p>
+					<ul>
+						<li>Each sister chromatid<br> moves to one end<br> of the cell</li>
+					</ul>
+				</p>
+			</section>
+			<hr>
+    </div>
+		<div>
+			<h3>Telophase</h3>
+			<section>
+				<p>
+					<ul>
+						<li>Forms new nuclear membrane<br> around each cluster of<br> separated chromosomes</li>
+					</ul>
+				</p>
+				<img id="telophase" src="https://raw.githubusercontent.com/Gitleptune/Gitleptune.github.io/main/misc/img/telophase.png">
+				<p>
+					<ul>
+						<li>Chromosomes might turn <br>into chromatids<br> (less condensed DNA)</li>
+					</ul>
+				</p>
+			</section>
+    </div>
+	</div>
+</body>
+</html>
