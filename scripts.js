@@ -38,9 +38,6 @@ const randomQuote= [
 		"There is a rumour going around that I have found God. I think this is unlikely because I have enough difficulty finding my keys, and there is empirical evidence that they exist",
 		// Misc
 		"A person's a person, no matter how small.", // Dr. Seuss
-		"First off, I'd suggest printing out a copy of the GNU coding standards, and NOT read it. Burn them, it's a great symbolic gesture.", // Linus
-		// Anime
-		"The human world is a boring place with boring people doing boring things.", // Ryuk, Death note
 		// Original-ish
 		"This website was made using 100% recycled words.", // Terry Pratchett
 		"Did any of the code I wrote last night suggest that I was sane?", // Terry Pratchett
